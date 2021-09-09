@@ -1,0 +1,28 @@
+#div1{
+    height: 100px;
+    width: 100px;
+    background: skyblue;
+    position: relative;
+    z-index: 1;
+
+}
+#div2{
+    height: 100px;
+    width: 100px;
+    background: olivedrab;
+    position: relative;
+    top: -50px;
+    left: 50px;
+    z-index: 0;
+
+}
+p{
+    font-size: 13px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    text-align: center;
+    color: lightsalmon;
+
+}
+/*Index is used to show the depth of the stack order(high number, higher on top)*/

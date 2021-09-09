@@ -1,0 +1,19 @@
+.div-yellow{
+    color: yellow;
+    font-size: large;
+    font-weight: bold;
+}
+*{
+    /*font-style: italic;*/
+}
+span, div, .div-yellow, #divOne{
+    font-size: 85px;
+}
+h2{
+    color: rosybrown;
+}
+body{
+    background-image: url(https://www.wallpaperup.com/uploads/wallpapers/2017/01/23/1075846/86f5922eb617fa3a747c9e13e2b6b79e-700.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}

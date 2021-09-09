@@ -1,0 +1,59 @@
+<html>
+    <head>
+        <style>
+            #myDiv{
+                background: slategrey;
+                min-height: 80px;
+                max-height: 150px;
+
+                min-width: 70px;
+                max-width: 160px;
+
+                height: auto;
+                width: 100px;
+            }
+            #myDivOne{
+                background: skyblue;
+                height: 100px;
+                width: 200px;
+                display: inline-block;
+            }
+            #myDivTwo{
+                background: coral;
+                height: 100px;
+                width: 200px;
+                display: inline-block;
+            }
+        
+        </style>
+    </head>
+    <body>
+        <div id="myDiv">Welcome</div>
+
+        <div id="myDivOne">Div 1</div>
+        <div id="myDivTwo">Div 2</div>
+    </body>
+</html>
+<!--
+    CSS Height Width Rules:
+    min-height: specify minimum height
+    max-height: specifiy maximum height
+
+    min-width: specify minimum width
+    max-width: specifiy maximum width
+
+    height and width:
+        -if above max, it goes to max-height:
+        -if under min, it goes to min-height:
+        -in range then it will show that px
+        -if 100%, then it goes to max-height:  
+            ??? when i specify height to 100%, then the height it specifying to max height not min height
+        -if auto, then it will take bare minimum of pg
+
+    display:
+        -inline-block: displays an element as a inline-level block container, height and width can be applied 
+        -inline: elements takes up only required amount of width 
+        -block: element takes up the complete width availiable
+        -none: means hidden, not going to show
+        -run-in: displays element in either block or inline, rare property
+-->

@@ -1,0 +1,17 @@
+.div-yellow{
+    color: yellow;
+    font-size: large;
+    font-weight: bold;
+}
+*{
+    /*font-style: italic;*/
+}
+span, div, .div-yellow, #divOne{
+    font-size: 15px;
+}
+h2{
+    color: rosybrown;
+}
+body{
+    background-color: olivedrab;
+}

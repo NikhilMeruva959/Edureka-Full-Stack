@@ -1,0 +1,80 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="./learning4.css"/>
+        <style>
+            div{
+                color: salmon;
+            }
+            #divZero{
+                color: powderblue;
+                padding: 10px;
+                border: 10px solid salmon;
+                margin: 44px;
+                margin-left: 40px;
+                padding-top: 60px;
+                
+            }
+            h2{
+                color: mediumslateblue;
+            }
+        </style>
+        
+    </head>
+    <body>
+        <h2 style="color: aquamarine;">
+            Heading Two
+        </h2>
+        <p style="color: olive; font-size: large;">
+            Welcome to Eudreka!!!
+        </p>
+        <div id="divZero">Hello 0</div>
+        <span>World 0</span>
+        <div class="div-yellow">Hello 1</div>
+        <span>World 1</span>
+        <div>Hello 2</div>
+        <span class="div-yellow">World 2</span>
+        <div class="div-yellow">Hello 3</div>
+        <span class="div-yellow">World 3</span>
+        <input type="text"/>
+        <input type="text"/>
+        <input type="text"/>
+        <input type="text"/>
+    </body>
+</html>
+<!--
+Inline CSS: 
+    -using style attribute
+    -can provide this atrribute on html tags
+    -fomat: provide key: value pair;
+    -can provide mutiple key: value pair seprated by semicolon
+
+  -CONS: -have to replicate for each tag
+    -not easy to modify, maintain, mistakes can easily occur
+
+Internal CSS:
+    -internal to entire web pg
+    -use <style></style> inside <head></head? tag
+    -easier to maintain
+    -selectors to identify elements
+
+    -CONS: styles limited to a single web page
+           not as easy to maintain
+
+    Types of selectors:
+    1) Element selectors / Name selectors - specify with just name, Ex: div{}
+    2) Class selectors - specifiy with .ClassName (class can apply to diffrent tags also), Ex .div-yellow{} 
+    3) id selectors - specify with #, Ex: #divOne{}
+    4) Grouped selectors - grouping selectors by commas, Ex. span, div, .div-yellow, #divOne{}
+    5) Universal selectors - all the elements follow similar style(use *), Ex, *{}
+
+External CSS:
+    -can write styles in external css file
+    -using <link href"" rel stylesheet>
+    -can be used on multiple web pages 
+    -can maintain one file to style web pg
+
+Precedense:
+    -style that is more near will be displayed first
+    -Ex: look at h2 tag and play around
+
+-->

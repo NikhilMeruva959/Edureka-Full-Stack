@@ -1,0 +1,110 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <!--id: specify the unique identity to an element-->
+        <!--class: specify the identity to an element. This identity can or can't be unique-->
+        <!--title: specify extra info. about an element-->
+        <!--hidden: specify whether the element will be displayed or not-->
+        <div hidden id="myDiv" title="parent-div" class="mystyles" style="color: aquamarine; height: 400px; width: 800px; background: lightcoral;">
+            <h2>Heading 2</h2>
+            <h3>Heading 3</h3>
+
+            <span>I am a span</span>
+
+            <select style="color: brown;">
+                <option>NJ</option>
+                <option>NY</option>
+            </select>
+
+            <p>I am a paragraph</p>
+        </div>
+
+        <span id="mySpan" title="parent-span" class="mystyles" style="color: lightsalmon; height: 400px; background: lightslategray;">
+            <h2>Heading 2</h2>
+            <h3>Heading 3</h3>
+
+            <span>I am a span</span>
+
+            <p>I am a paragraph</p>
+        </span>
+        <!--<section> is for grouping distinct sections of content or functionality
+            <article> is for containing related individual standalone pieces of content, such as individual blog posts, videos, images or news items.-->
+
+        <!--input: used to define a field where user can enter data-->
+        <!--br: line break-->
+        <!--
+            type attribute: specify type of data to be received from user
+            src attribute: specify source of image
+            name attribute: specify name of element
+            alt attribute: speccify alternate text for user
+            id attribute: specificy id of element
+            class attribute: specify class of element
+            required attribute: specify input field is madatory before submitting field
+            value attribute: specify default value for input element
+            size attribute: specify max num of character as a input
+            height, width attribute: specify dimensions of image
+            placeholder attribute: specify short hintthat describes expected value of input element
+        -->
+        <input type="text" placeholder="UserName">
+        </br>
+        </br>
+        <input type="number" placeholder="PhoneNumber" maxlength="10">
+        </br>
+        </br>
+        <input type="file">
+        </br>
+        </br>
+        <input type="date">
+        </br>
+        </br>
+        <input type="button" value="Click Me">
+        </br>
+        </br>
+        <input type="image" src="./images/balsgbnnerBackground.png" height="400px">
+        </br>
+        <!--
+            href: specifies URL or directory of the linked resource
+            download: used when the linked resource needs to be downloaded instead of opening it
+            media: used to specify what media linked resource is optimized for
+            target: used for where the linked resource should be opened
+        -->
+        <a href="https://www.google.com/" target="_blank">Go to Google</a>
+        </br>
+        <form action="LINK OF THE SERVER WHERE YOU WANT INFO. SENT">
+            <label>First Name</label>
+            <input type="text"/>
+            </br>
+            <label>Last Name</label>
+            <input type="text"/>
+            </br>
+            <label>Age</label>
+            <input type="number"/>
+            </br>
+            <label>Email</label>
+            <input type="email"/>
+            </br>
+            <!--
+                Radio Button: Mutually Exclusive(Only can select one option)
+                Checkbox: Mutually Enclusive(Can check all the boxes)
+            -->
+            <label>Gender</label>
+            <input type="radio" name="gender"/> Male
+            <input type="radio" name="gender"/> Female
+            <input type="radio" name="gender"/> Other
+            </br>
+            <label>Qualification</label>
+            <input type="checkbox" name="quali"/> Under-Grad
+            <input type="checkbox" name="quali"/> Grad
+            <input type="checkbox" name="quali"/> Post Grad
+            </br>
+            <label>Upload Picture</label>
+            <input type="file"/>
+            </br>
+            </br>
+            <input type="submit"/>
+            <input type="reset"/>
+        </form>
+    </body>
+</html>

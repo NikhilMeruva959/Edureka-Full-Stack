@@ -1,0 +1,78 @@
+<html>
+    <head>
+        <title>My first Javascript Class</title>
+
+        <script type="text/javascript">
+        //write javascript
+        var num = 10; //global scope
+        var num3 = 660;
+        function buttonClick(){
+            alert("You clicked me")
+            var num2 = 20;
+            console.log(num); //10 lexical scoping
+        }
+        function welcome(){
+            document.write("Welcome user!")
+        }
+        function buttonClick2(){
+            var num2=30; //local scope
+        }
+        
+        // console.log(num2); //Erro, num2 not defines
+        </script>
+        <script src="./index.js" type="text/javascript"></script>
+        <!--Creating varibales in javascript:
+
+        Fucntion scope: if you create a variable anywhere inside the fucntion, it will be visible
+        Hoisitng: process to take the variable defintion to the top of the program
+        Loose Coupling: youn can mutate the variable from String to int to bool, anything u want
+        1) var
+                                    OUTPUT:
+            console.log(num); // undefined. hoisting
+            var num = 10;
+            console.log(num); // 10
+
+            ***mutuable***
+            ***Functional Scope***
+            ***Loose Coupling***
+
+        2) let
+                                    OUTPUT:
+            console.log(num2); // Error: uncaught RefrenceError: cannot acess 'num2'
+            var num2 = 20;
+            console.log(num2);
+        
+            ***mutuable***
+            ***Block Scope***
+            ***Loose Coupling***
+
+        3) const:
+
+            console.log(num3) // Error: Uncaught RefrenceError: Cannot access 'num3'
+            var num3 = 10;
+            console.log(num3);
+
+            ***NOT Mutuable***
+            ***Function Scope***
+            ***Loose Coupling***
+        -->
+
+
+
+    </head>
+    <body>
+        <script type="text/javascript">
+            document.write("Welcome to Eudreka")
+        </script>
+        <button onclick="buttonClick()">Click Me!</button>
+        <button onclick="welcome()">Click for message</button>
+        <button onclick="myFunction()">Hello</button>
+        <script type="text/javascript">
+            document.write("Welcome to Eudreka again")
+            console.log(num3);
+        </script>
+        <script type="text/javascript">
+            console.log(typeof num3);
+        </script>
+    </body>
+</html>

@@ -1,0 +1,56 @@
+<html>
+    <head>
+        <script>
+            //Class 18
+
+            /*
+                Spread operator
+
+                -> represented as ...
+                -> used for concatentation and combining operations
+
+                -> Objects combinbing
+            */
+            var obj1 = {
+                name1: "Nikhil",
+                course: "Fullstack"
+            }
+            var obj2 = {
+                name2: "Rohit",
+                course: "Tutoring"
+            }
+            var obj3 = {
+                ...obj1,
+                ...obj2, 
+                name3: "Akshay"
+            }
+            console.log(obj3);
+            //only prints obj2 course since it has benn over written
+
+            //  -> Arrays combining
+            var array1 = ['a', 'b', 'c'];
+            var array2 = [1,2,3,4,5];
+            var array3 = [...array1, ...array2, 'e', 'f', 100, 1.1];
+            console.log(array3);
+
+            // Rest operator
+            const sum = function(a, b, ...rest){
+                console.log(rest);
+                let sumOfRestParam = 0;
+                if(rest.length > 0){
+                    sumOfRestParam = rest.reduce((total, item) => {
+                        return total + item;
+                    });
+                }
+                return a + b +sumOfRestParam;
+            }
+            console.log(sum(10, 20));
+            console.log(sum(10, 20, 30));
+            console.log(sum(10, 20, 30, 40));
+            console.log(sum(10, 20, 30, 40, 50));
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>

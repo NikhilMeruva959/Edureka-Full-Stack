@@ -1,0 +1,195 @@
+<html>
+    <head>
+    
+        <!--
+            Class 13
+
+            Output Statements in JS
+            (1) console.log()
+            (2) window.alert()
+            (3) document.write()
+            (4) innerHTML
+
+            Input Statements in JS
+            (1) window.confirm()
+            (2) widow.prompt()
+
+            Arrays in JS
+            let array=[1,2,3,4,5,9]
+        -->
+        <script>
+            
+            let a = 2, b = 3, c =4, d =2
+
+            if((a==d) && (b!=c)){
+                console.log("Inside AND")
+            }
+            else{
+                console.log("Conditon not sastified")
+            }
+
+            if((a==d) || (b==c)){
+                console.log("Inside OR")
+            }
+            else{
+                console.log("Conditon not sastified")
+            }
+            if((b==c)){
+                console.log("Inside NOT")
+            }
+            else console.log("Conditon not sastified")
+
+            function showOutput(){
+                //console.log("This is my output");
+                //window.alert("Output in Alert");
+                //document.write("Output in Document");
+
+                let divElem = document.getElementById("myDiv1");
+                divElem.innerHTML = 'Welcome to Eudreka !';
+            }
+
+            function askInput(){
+                let name = window.prompt("Whats your name???");
+                console.log(name);
+            }
+
+            function deletePost(){
+                let isDelete = window.confirm("Are you sure, you want to delete?");
+                if(isDelete) console.log("Post delete sucessful");
+                else console.log("Post not deleted");
+            }
+
+            //Array
+            let arr1 = [1,2,3,4,5,6,7,19, 0, 17];
+            let arr2 = ["String", "Nike", "Addidas", "Yeezy", "Asics", "New Balance", "Reebok"]
+            function buttonArr(){
+                pushIntoArray();
+            }
+            function pushIntoArray(){
+                arr1.push(111);
+                console.log(arr1);
+            }
+            function buttonArr2(){
+                pushIntoStartArray();
+            }
+            function pushIntoStartArray(){
+                arr1.unshift(100);
+                console.log(arr1);
+            }
+            function buttonArr3(){
+                removeItemFromEnd();
+            }
+            function removeItemFromEnd(){
+                arr1.pop();
+                console.log(arr1);
+            }
+           
+            function getEvenNum(){
+                let result = arr1.map(
+                    function(x){
+                        return x % 2 == 0;
+                    }
+                );
+                console.log(result);
+            }
+            function filterEvenNum(){
+                let result = arr1.map(
+                    function(x){
+                        if(x % 2 == 0) return x;
+                    }
+                );
+                console.log(result);
+            }
+            function filterEvenNumV2(){
+                let result = arr1.filter(
+                    function(x){
+                        return x % 2 == 0;
+                    }
+                );
+                console.log(result);
+            }
+            function buttonArr0(){
+                let userVar = window.prompt("what num you want to add to array?");
+                arr1.push(userVar);
+                console.log(arr1);
+            }
+            function multiplyBy10(){
+                let result = arr1.map(
+                    function(x){
+                        return x*10;
+                });
+                console.log(result);
+            }
+
+            function find6(){
+                let result = arr1.find(
+                    function(x){
+                        return x == 6;
+                    }
+                )
+                console.log(result);
+            }
+
+            //let arr1 = [1,2,3,4,5,6,7,19];
+            function cutArray(){
+                let result = arr1.slice(3,6);
+                console.log(result);
+            }
+
+            function sortArrayAscend(){
+                let x = arr1.sort(
+                    function(a,b){
+                        return a-b;
+                    });
+                console.log(x);
+            }
+            function sortArrayDescend(){
+                let x = arr1.sort(
+                    function(a,b){
+                        return b-a;
+                    });
+                console.log(x);
+            }
+
+            function combine(){
+                let x = arr1.concat(arr2);
+                console.log(x);
+            }
+            function getIndex(){
+                let num = window.prompt("Whats the num that you want index of???");
+                let index = arr1.indexOf(num);
+                console.log(index)
+            }
+
+        </script>
+
+    </head>
+    <body>        
+        <button onclick="showOutput()">Show Output</button> 
+        <div id="myDiv1">Welcome</div>
+        <button onclick="askInput()">Ask Input</button>
+        <button onclick="deletePost()">Delete Post</button>
+
+        <button onclick="buttonArr()">Add Item to end</button>
+        <button onclick="buttonArr2()">Add Item to front</button>
+        <button onclick="buttonArr3()">Remove item from end</button>
+
+        <button onclick="getEvenNum()">Get EVEN</button>
+        <button onclick="filterEvenNum()">Get EVEN Filter</button>
+        <button onclick="filterEvenNumV2()">Get EVEN Filter Version 2.0</button>
+
+        <button onclick="multiplyBy10()">Multiply by 10</button>
+
+        <button onclick="find6()">Find num 6</button>
+        <button onclick="cutArray()">Array Cut</button>
+
+        <button onclick="sortArrayAscend()">Sort Ascend</button>
+        <button onclick="sortArrayDescend()">Sort Descend</button>
+        <button onclick="combine()">Combine</button>
+
+
+        <button onclick="buttonArr0()">Add CUSTOM Item to end</button>
+
+
+    </body>
+</html>

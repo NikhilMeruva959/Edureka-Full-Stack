@@ -1,0 +1,160 @@
+<html>
+    <head>
+        <script>
+            // Class 17
+            
+            // Callback
+            const sum = (a, b, prnSum) => {
+                let s = a+b;
+                prnSum(s);
+                //return s;
+            }
+            const printSum = (su) => {
+                console.log(su);
+            }
+            sum(10, 20, printSum);
+
+            /*
+                Promises - when you need to make API call
+
+                States of a promise:
+                1) Complete : success
+                2) Error : failure
+                3) In-Process : pending
+            */
+            const sum2 = (a, b, prnSum2) => {
+                console.log("Promise Running")
+
+                let result = new Promise((resolve, reject) => {
+                    //Make an API call, 1 -100s
+                    setTimeout(() => {
+                        let s = a+b;
+                        //resolve(s);
+                        reject("It is an error");
+                    }, 3000);
+                });
+                
+                result.then((success) => { //when done
+                    prnSum2(success);
+                }).catch((error) =>{ //when fails
+                    console.log("Error occured " + error);
+                });
+            }
+            const printSum2 = (su) => {
+                console.log(su);
+            }
+            sum2(10, 90, printSum2);
+            
+            //Asnyc & await
+
+            async function sum3(a, b){
+                console.log("Promise Running")
+
+                let result = new Promise((resolve, reject) => {
+                    setTimeout(() => {
+                        let add = a+b;
+                        resolve(add);
+                        //reject(null);
+                    }, 3000);
+                });
+                return await result;
+            }
+            sum3(10, 20).then((success) => {
+                console.log("Sucess value: " + success);
+            }).catch((error) => {
+                console.log("Error: " + error);
+            });
+
+            /* 
+                IIFE - Immediately Invoked Function Expressions
+                -> it is a design pattern
+                -> Ex. Flipkart asks for user login/signup when you enter website
+
+            */
+            (function() {
+                setTimeout(() => {
+                    isLoggedIn =  false; //document.cookie;
+
+                    if (isLoggedIn) {
+                        // show the username on the top right corner 
+                    } else {
+                        // show the login popup
+                        let ele = document.createElement('div');
+                        ele.innerHTML = "Please Login....."
+                        let parent = document.getElementsByClassName('content');
+                        parent[0].append(ele);
+                    }
+                }, 3000);
+            })();
+
+            /*
+                Query String
+                https://www.motortrend.com/news/porsche-911-turbo-one-of-one-pedro-rodriguez-special-edition/
+                -> technique of passing info in URL
+                -> e.g. user= Nikhil Meruva
+                        id= 1891903
+                <URL> ? <key=value> & <key=value> & <key=value> & .....
+            */
+
+            // Object Descontructing
+            let obj = {
+               firstName : "Nikhil",
+               lastName : "Meruva",
+               course : "MERN",
+               age : 19
+            }
+            let fn = obj.firstName;
+            let ln = obj.lastName;
+            let firstN = obj['firstName'];
+            let lastN = obj['lastName'];
+
+            let {firstName, lastName, age} = obj;
+            // it is  equal to write the following two lines...
+            // let firstName = obj.firstName
+            // let lastName = obj.lastName
+            console.log(firstName + " " + lastName + " " + age);
+
+            /*
+                ReactJS (Facebook) : 75%
+                AngularJS (Google) : 4-5%
+                Angular (Google + Microsoft) : 16-18%
+                All other : 2-3%
+
+                ReactJS -> Used for web development
+                vs
+                React NAtive -> Used for mobile app development
+                vs
+                React VR -> Used for VR related applications
+            */
+
+            /*
+                Concise Functions
+
+                -> For functions within object, normal practice is: printName: function() {}
+                -> Concise function is shortend: printName(){}
+            */
+            let obj2 = {
+                firstName2: "Nick",
+                lastName2: "Rossi",
+                printName: function() {
+                    console.log(this.firstName2 + " " + this.lastName2);
+                }
+            }
+            let obj3 = {
+                firstName2: "Tommy",
+                lastName2: "Miller",
+                printName() {
+                    console.log(this.firstName2 + " " + this.lastName2);
+                }
+            }
+            console.log(obj2.printName());
+            console.log(obj3.printName());
+
+
+        </script>
+    </head>
+    <body>
+        <h1>Flipkart</h1>
+        <div class="content"></div>
+    </body>
+</html>

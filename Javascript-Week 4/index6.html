@@ -1,0 +1,145 @@
+<html>
+    <head>
+        <script type="text/javascript">
+            //Class 16
+
+            function setLocalStorage(){
+                localStorage.setItem("Username", "nikmeruva1@gmail.com")
+            }
+            function getLocalStorage(){
+                let user = localStorage.getItem("Username")
+                alert(user);
+            }
+            function setSessionStorage(){
+                sessionStorage.setItem("isLoggedIn", true)
+            }
+            function getSessionStorage(){
+                let isUserLoggedIn = sessionStorage.getItem("isLoggedIn")
+                alert(isUserLoggedIn);
+            }
+
+            //Scheduling 
+            //timeout -> after certain time has passed, execute the task
+
+            function logout(){
+                sessionStorage.removeItem("isLoggedIn");
+                alert("User is logged out");
+            }
+            setTimeout(() => {
+                logout();
+            }, 5000)
+
+            //interval - you will execute a peice of code after every few seconds
+
+            let temp = setInterval(() => {
+                console.log("Welcome to Eudreka!!!")
+            }, 3000);
+
+            function stop(){
+                clearInterval(temp);
+            }
+            /*
+                Event Handling
+                events -> actions performed by the user 
+
+                -> button: onclick=""
+                -> select: onchange=""
+                -> checkbox: onchecked=""
+                -> inpit: onchange=""            
+            */
+
+            function login(event){
+                alert("Logged in successfully!!!")
+            }
+            function selectLocation(event){
+                let val = event.target.value;
+                alert("Selected City: " + val)
+            }
+            /*
+                Exception Handling
+                -> Exception is the unexpected behavior of a program which results in crashing the program
+                -> Exception handling is the process to handle the unexpected behavior and prevent the program from crashing
+
+                try{
+                    //code which can throw an exception
+                    //Ex API Call
+                } catch(ex) {
+                    // log the exception on console
+                    // Make another API Call
+                    // Report it to some other API
+                    // etc.
+                } finally{
+                    // this code will run for sure even with/without execption
+                }
+            */
+           try{
+               console.log("in try block");
+               console.log(name3);
+           } catch (ex){
+               console.log("in catch block");
+               console.log(ex.toString()); //Prints execption
+           } finally{
+               console.log("In finally block");
+           }
+
+           /*
+                Asnychronnous Programming
+
+                1) Callbacks
+                2) Promises
+                3) async and await
+                4) Reactive Programming - COME BACK TO AND LEARN (Not taught)
+           */
+
+           // Callback
+           const sum = (a, b, prnSum) => {
+               let s = a+b;
+               prnSum(s);
+               //return s;
+           }
+           const printSum = (su) => {
+               console.log(su);
+           }
+           sum(10, 20, printSum);
+           
+        </script>
+        <!--
+            JSON Format: format for data exchange
+            JSON: Javascript Object Notation
+
+            let obj = {
+                name: "Nikhil",
+                age: 19,
+                course "MERN"
+            }
+            ->XML Format
+        -->
+        <!--
+            Dictionary
+            
+            var obj = {
+                name: "Nikhil",
+                age: 19,
+                course "MERN" 
+            }
+            -> '.' : obj.name // "Nikhil"
+            -> []  : obj["name"] // "Nikhil"
+        -->
+    </head>
+    <body>
+        <button onclick="setLocalStorage()">Set localstorage</button>        
+        <button onclick="getLocalStorage()">Get Data</button>        
+
+        <button onclick="setSessionStorage()">Login</button>        
+        <button onclick="getSessionStorage()">Checked if Logged in</button>   
+        <button onclick="stop()">Stop Interval</button>
+
+        <button onclick="login(event)">Login</button>
+        <select name="Cities" onchange="selectLocation(event)">
+            <option value="Boston">Boston</option>
+            <option value="New York City">New York City</option>
+            <option value="Los Angles">LA</option>
+
+        </select>
+    </body>
+</html>

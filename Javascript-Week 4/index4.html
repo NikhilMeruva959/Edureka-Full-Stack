@@ -1,0 +1,137 @@
+<html>
+    <head>
+        <script>
+            //Class 14
+
+
+            class myClass{
+                //data memebers
+
+                constructor(myCourse){
+                    this.firstName = "Nik";
+                    this.lastName = "Meruva";   
+                    this.course = myCourse;  
+                }
+
+                printCourse(){
+                    console.log(this.course);
+                }
+                //function memebers
+                printName() {
+                    console.log(this.firstName + " " + this.lastName);
+                }
+            }
+            let obj = new myClass();
+            obj.printName();
+            obj.printCourse();
+
+            let obj2 = new myClass("MERN");
+            obj.printName();
+            obj.printCourse();
+
+
+            //Arrays and Loops
+            let array = [1,2,3,4,5,6];
+            for(let i = 0; i<array.length; i++){
+                console.log(array[i] * 10);
+            }
+            for(let i= 10; i>=0; i--) console.log(i);
+
+            //While loop
+            let index = 11;
+
+            while(index > 0){
+                if(index % 2 ==0) console.log(index + " is even");
+                else console.log(index + " is odd");
+
+                index--;
+            }
+            console.log("----------------------");
+            
+            //switch case
+            for(let i =0; i<array.length; i++){
+                switch(array[i]){
+                    case 1: 
+                        console.log("first value");
+                        break;
+                    case 2: 
+                        console.log("second value");
+                        break;
+                    case 3: 
+                        console.log("third value");
+                        break;
+                    case 4: 
+                        console.log("fourth value");
+                        break;
+                }
+            }
+
+            //ternary operator
+            let num = 11;
+            let num2 = 98;
+            if(num % 2 == 0) console.log("number is even");
+            else console.log("number is odd");
+
+            //<condition> ? <if statement> : <else statement>
+            num2 %2 ==0? console.log("number is even") : console.log("number is odd");
+
+            //Strings
+            let str = 'Welcome ';
+            let str2 = new String("MERN Stack");
+            let str3 = str.concat(str2);
+
+            console.log(str.charAt(3));
+            console.log(str.slice(2,5));
+            console.log(str3);
+            console.log(str.lastIndexOf('e'));
+            console.log(str3.substr(3,8));
+            console.log(str.split('e'));
+
+            let num3 = 10;
+
+            let str4 = "value is: " +num;
+            console.log(str4);
+
+            let str5 = 'value is: ${num}';
+            console.log(str5);
+
+            //Math
+
+            let num4 = 2;
+            let num5 = 3.9182028;
+
+            console.log(Math.pow(2,3));
+            console.log(Math.floor(num5));
+            console.log(Math.ceil(num5));
+
+            //Date
+            let date = new Date();
+            console.log(date.getDate());
+            console.log(date.getMonth()); //0 based index so one shorter
+            console.log(date.getDay()); // Wednesday is 3
+            console.log(date.getFullYear());
+            
+            let myBday = new Date(2001, 9, 14, 6, 99, 43);
+            console.log(myBday);
+
+            /* DOM  - Document Object Model
+                    - made up od nodes and connections
+                    - root node, Inodes, leaf nodes
+            
+                Document Root
+                ->[HTML]
+                    ->[HEAD]
+                        ->[Title]
+                            -> Content
+                                : my website
+                    ->[Body]
+                        ->[Div]
+                            ->Content
+            */
+            
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>

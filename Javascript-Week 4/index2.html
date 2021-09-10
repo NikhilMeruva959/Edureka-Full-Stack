@@ -1,0 +1,93 @@
+<html>
+    <head>
+        <script>
+            //typeof ex.
+            let num = 10;
+            console.log(typeof num);
+            num = 99.99;
+            console.log(typeof num);
+
+            //Printing str in console
+            let str1 = "Eudreka";
+            console.log(str1);
+            str = "Welcome";
+
+            obj = {
+                name: "Nikhil",
+                num: 1,
+                isLoggedIn: true,
+                education: {
+                    gradDate: 2024,
+                    postGrad: false,
+                    year: 2021,
+                    
+                    sub: {
+                        math: true,
+                        science: {
+                            physics: true,
+                            bio: false,
+                            chem: true
+                        }
+                    },
+                writing: false
+                },
+                "course name": "MERN"
+            }
+
+            //returing object indecies using . operator
+
+            console.log(obj);
+            console.log(obj.num);
+            console.log(obj.education.gradDate);
+            console.log(obj.education.sub.science.bio);
+            //console.log(obj.course name);    -->ERROR
+          
+
+            //returing object indecies using []
+            console.log(obj["education"]);
+            console.log(obj["education"]["sub"]["science"]["chem"]);
+            console.log(obj["course name"]);
+
+            //printing object keys and values
+            console.log(Object.values(obj));
+            console.log(Object.keys(obj));
+
+            //rewriting variable
+            obj.name = 'Nik';
+            console.log(obj["name"]);
+
+            //creating key value
+            obj['city'] = 'Manhattan';
+            console.log(obj);
+
+            //delete key value
+            delete obj.isLoggedIn;
+            console.log(obj);
+
+            let arr1 = [99, 22, 33, 44];
+            console.log(arr1);
+            let arr2 = [100, "MERN", .03, true, {name: "Nikhil", zip: 09924}, -7, 'C', [1,4,'abc',false, [], -8]];
+            console.log(arr2);
+            console.log(arr2[2]);
+            console.log(arr2[7]);
+            console.log(arr2[4].zip);
+
+            function myFunction(){
+                window.alert("Welcome to Eudreak");
+
+            }
+            myFunction();
+
+            function sum(a, b){
+                return a+b;
+            }
+            const result = sum(666, 999);
+            console.log(result);
+
+
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>

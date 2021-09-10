@@ -1,0 +1,87 @@
+<html>
+    <head>
+        <title>Javascript Practice</title>
+        <script>
+            //Class 15
+
+            //default params
+            function sum(a=77, b = 15){
+                return a+b;
+            }
+            console.log(sum(10));
+            console.log(sum(10, 666));
+            console.log(sum());
+
+            //Arrow Functions
+            const sum2 = (a=77, b = 15) => {
+                return a+b;
+            }
+            console.log(sum(10));
+            console.log(sum(10, 666));
+            console.log(sum());
+
+            /*
+            Arrow Functions:
+
+            Original: function myFunct(){}
+            Similar: const myFunt = function(){}
+            Arrow Function: myFunct = () => {}  
+            classes along with this keyword
+            */
+           
+            //This Keyword
+            //if inside constructor, you have to use this keyword for intializing variables
+            this.xyz = "Eudreka"
+
+            function printVariable(){
+                console.log(this.xyz);
+            }
+            printVariable();
+
+            this.table = "House Table"
+
+            this.garage = {
+                table: "Garage Table"
+            }
+            //variable in local scope not global scope
+            let room = { 
+                table: "Room Table"
+            }
+
+            this.garageTwo = {
+                table: "Second Garage Table",
+                clean: function() {
+                    console.log(`${this.table} cleaned!!!`);
+                }
+            }
+            let roomTwo = {
+                table: "Dining Table",
+                clean: function() {
+                    console.log(`${this.table} cleaned!!!`);
+                }
+            }
+            const clean = function() {
+                console.log(`${this.table} cleaned!!!`)
+            }
+
+            console.log(this.table);
+            console.log(table);
+            console.log(this.garage.table);
+            console.log(room.table);
+            //console.log(this.room.table); //error: let allows you to declare variables that are limited to the scope of a block statement
+            console.log(this.garageTwo.clean()); 
+            console.log(roomTwo.clean());
+            console.log(clean());
+
+            
+        </script>
+    </head>
+    <body>
+        <form>
+            <div>Name: <input type="text" required minlength="6"/></div>
+            <div>Age: <input type="number" required min="18"/></div>
+            <div>Email: <input type="email" required/></div>
+            <button type="submit">Submit</button>
+        </form>
+    </body>
+</html>

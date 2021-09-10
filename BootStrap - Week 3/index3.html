@@ -1,0 +1,182 @@
+<html>
+    <head>
+        <title>Bootstrap Recap</title>
+        <style>
+            .box{
+                height: 50px;
+                text-align: center;
+                padding: 10px;
+                border: 1px solid slategrey;
+            }
+            .search-div{
+                position: relative;
+            }
+            .search-icon{
+                position: absolute;
+                top: 6px;
+                left: 3px;
+            }
+            .search-box{
+                padding-left: 22px;
+            }
+            .navigate{
+                background: slategray;
+                padding: 10px;
+            }
+            .navigate a {
+                padding: 15px;
+                border: 1px solid slategray;
+                color: white;
+                border-radius: 3px;
+                text-decoration: none;
+            }
+            .navigate a:hover{
+                border: 1px solid seashell;
+                color: azure;
+            }
+            .sideNav{
+                height: 100%;
+                width: 200px;
+                position: fixed;
+                top: 0;
+                left: 0;
+                background: burlywood;
+                padding: 15px;
+                z-index: 1;
+            }
+            .sideNav a{
+                width: 100%;
+                padding: 10px;
+                border-bottom: 1px solid seashell;
+                text-decoration: none;
+                color: seashell;
+                display: block;
+            }
+            .main-content{
+                margin-left: 200px;
+            }
+        </style>
+    <!--First way to link Bootstrap CSS-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+
+    </head>
+    <body>
+        <div class="sideNav">
+            <a href="/home">Home</a>
+                <a href="/about">About</a>
+                <a href="/contact">Contact</a> 
+        </div>
+        <div class="container">
+            <nav class="navigate">
+                <a href="/home">Home</a>
+                <a href="/about">About</a>
+                <a href="/contact">Contact</a>
+            </nav>
+
+        </div>
+        <!--From Bootstrap navbar-->
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark">
+                <a class="navbar-brand" href="#">Navbar</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                  <ul class="navbar-nav">
+                    <li class="nav-item active">
+                      <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Features</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Pricing</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link disabled" href="#">Disabled</a>
+                    </li>
+                  </ul>
+                </div>
+              </nav>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="box col-xxl-2 col-xl-2 col-lg-4 col-md-4 col-sm-6 col-12">Box 1</div>
+                <div class="box col-xxl-2 col-xl-2 col-lg-4 col-md-4 col-sm-6 col-12">Box 2</div>
+                <div class="box col-xxl-2 col-xl-2 col-lg-4 col-md-4 col-sm-6 col-12">Box 3</div>
+                <div class="box col-xxl-2 col-xl-2 col-lg-4 col-md-4 col-sm-6 col-12">Box 4</div>
+                <div class="box col-xxl-2 col-xl-2 col-lg-4 col-md-4 col-sm-6 col-12">Box 5</div>
+                <div class="box col-xxl-2 col-xl-2 col-lg-4 col-md-4 col-sm-6 col-12">Box 6</div>
+            </div>
+        </div>  
+        <div class="container">
+            <div class="row">
+                <div class="box col-xxl-2">col-xxl-2</div>
+                <div class="box col-6">col-xxl-2</div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="search-div">
+                <i class="bi bi-search search-icon"></i>
+                <input type="text" class="search-box">
+            </div>
+        </div>
+        <div class="container">
+            <p class="h1 text-danger">Mclaren F1 GTR SCG LM 007</p>
+            <p class="h2">Mclaren F1 GTR SCG LM 007</p>
+            <p class="h3">Mclaren F1 GTR SCG LM 007</p>
+            <p class="h4">Mclaren F1 GTR SCG LM 007</p>
+            <p class="h5">Mclaren F1 GTR SCG LM 007</p>
+            <p class="h6">Mclaren F1 GTR SCG LM 007</p>
+        </div>
+        <div class="container">
+            <img src="images/lunch.png" class="img-fluid"/>
+
+            <table class="table table-bordered table-success">
+                <thead>
+                    <tr> 
+                        <th>Col 1</th>
+                        <th>Col 2</th>
+                        <th>Col 3</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1-1</td>
+                        <td>1-2</td>
+                        <td>1-3</td>
+                    </tr>
+                    <tr>
+                        <td>2-1</td>
+                        <td>2-2</td>
+                        <td>2-3</td>
+                    </tr>
+                    <tr>
+                        <td>3-1</td>
+                        <td>3-2</td>
+                        <td>3-3</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div>
+                <form class="mt-5 mb-5 text-center" style="width: 500px; margin: auto; text-align: center;">
+                    <div class="mb-2">
+                        <label class="form-label">Username</label>
+                        <input class="form-control" type="text"/>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Password</label>
+                        <input class="form-control" type="password"/>
+                    </div>
+                    <div>
+                        <button class="btn btn-success">Login</button>
+                        <button class="btn">Cancel</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>

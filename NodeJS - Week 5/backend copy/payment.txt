@@ -1,0 +1,24 @@
+Step 1: Zomato FE will send a request to Zomato BE
+            -/payment
+
+Step 2: Zomato BE will send a response to Zomato BE
+            - our BE will give a response of this payment endpoint
+
+Step 3: Zomato FE will take this response to Paytm System
+
+Step 4: User will make a payment
+
+Step 5: Paytm System will inform Zomato BE
+
+1. Copy keyes into .env file
+2. we need an external library from the paytm website code- 
+-> download PaytmChecksum.js and put it in the controllers folder, do not change it
+-> need 5 packages from npmjs.com
+    - dotenv: to read the contents of .env file
+    - formidable: to deal with form data
+    - uuid: generate a unique id for every payment
+    - https: to secure the communication with paytm server
+    - crypto: required by the PaytmChecksum.js
+-> Now we will create the 2 apis
+    - /payment
+    - /paymentCallback

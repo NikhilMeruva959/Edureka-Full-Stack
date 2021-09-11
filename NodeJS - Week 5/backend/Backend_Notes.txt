@@ -1,0 +1,49 @@
+BE: npm init
+    - package.json
+        - scripts -> "start:nodemon": "nodemon app.js"
+    
+    npm i express nodemon body-parser mongoose --save
+
+    app.js
+        Listen to the incoming requests (express JS)
+
+        const express = require('express'); //start express server
+
+        const app = express(); // 
+
+        const port = 5000;
+        app.listen(port, () => {
+            console.log("Server is running on port : " + port);
+        });
+
+    We have not connected to the Database
+        - connection string
+            - mongoDB atlas
+                - provide acess to 0.0.0.00
+                - create a user
+                - create a Database
+                -copy connection string
+            - mongoose
+                - connection function
+
+    Routes //to give proper routes for requests to the controllers
+        index.js
+            - express router
+            - import the controllers
+            - bind the controller functionality with the routes
+    Controllers
+        - Restaurant
+            - import the Model
+            - export the functionality for every route
+        - Location
+        - Meal type
+        - user
+    Model
+        - Restaurant
+            - import mongoose
+            - create a schema
+            - connect the schema to mongoDB
+            - export the model
+        - Location
+        - Meal type
+        - user

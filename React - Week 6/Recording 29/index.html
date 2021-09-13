@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Simple React App</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.js" crossorigin></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react-dom.js" crossorigin></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.21.1/babel.min.js" crossorigin></script>
+    </head>
+    <body>
+        <h1>Welcome to Simple React Page</h1>
+        <div id="root"></div>
+
+        <script type="text/babel">
+            class MyComponent extends React.Component{
+                render(){
+                    // Returns jsx = HTML embedded in javascript
+                    return(
+                        <div>
+                            <h2>My first simple React App</h2>
+                            <h3>Very exicted to learn recat!!!</h3>
+                        </div>
+                    )
+                }
+            }
+
+            ReactDOM.render(
+                <MyComponent/>,
+                document.getElementById('root')
+            )
+        </script>
+    </body>
+</html>

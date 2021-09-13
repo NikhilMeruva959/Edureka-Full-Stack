@@ -1,0 +1,38 @@
+//// Components in React
+
+- the functionality in React is divided in Components
+    - functional
+    - class based
+
+
+- simple react app: if you want to add reactJS to an existing HTML page
+    - I have to add the CDN lnks for the react library
+    - I need an HTML element under which I will render other HTML Elements using react
+    - I need a script tag where I will write the React code
+        1) create a JS class extends from React Library
+        2) Render the JSX provided by class under the HTML element
+
+- create-react-app utility
+    npx create-reacta-app my-second-react-app
+
+
+//// nesting of Components
+
+
+//// Passing data from parent component to child component
+    - props: is used to pass data from parent component to child component
+    - in react, the flow of data is uni-directional (flows from parent component to child component)
+    - props is immutable: changing the props is not possible
+
+    Two ways of passing the data:
+        (1) Between the tags
+        (2) As an attribute of the tag
+
+
+//// Local data of a component
+
+    - state: it is used to hold the data of a component
+    - state is mutable: you can change the state
+    - setState method to update the state
+        1) updates the state
+        2) it triggers the render function again

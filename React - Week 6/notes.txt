@@ -1,0 +1,107 @@
+
+/// MVC architecture:
+
+
+FE: View Layer
+    - HTML
+    - CSS
+        - write our own CSS
+        - Bootstarp Framework
+    - Javascript
+        - write our own Javascript
+        - ReactJS, Angular, VueJS, backabone etc etc
+
+
+BE: Controller Layer
+    - NodeJS
+    - ExpressJS
+        - Models : To connect to MongoDB (M)
+        - Controllers : We used to call the functions in Controllers (C)
+        - Routes : routes exposes the functionality to outer world (V)
+
+
+DB: Model Layer
+    - MongoDB
+
+
+- Benefits of an MVC architecture: Loosly coupled architecture
+    - You can develop all 3 layers independently
+    - You can change / upgrade any one layer without disturbing the other two
+    - BE and DB layer can be shared by many FE layers
+    - Each layer can be tested independently
+
+
+
+/// Library Vs Framework 
+
+    Library: a set of functionalities
+            - reactJS
+
+    Framework: a set of functionalities + an environment to run the functionalities in side it
+             : frameworks follow the "Hollywood principle", i.e. "don't call us, we'll call you."
+            - Angular
+
+
+
+Single Page Application
+    - ReactJS.org
+    - the entire HTML, CSS and JS gets loaded in the browser on the very first request all at once
+    - initial page load time is high, as it has to fetch all the HTML, CSS and JS in the very firts req
+    - subsequent requests are very fast
+
+
+
+Traditional Application
+    - w3schools.com
+    - with every new request server will send a new HTML, css and JS to the browser
+    - initial page load time is very less
+    - subsequent requests also take the similiar time as taken by the initial request
+
+
+
+DOM: Document Object Model
+    - Browsers cannot undertsand the HTMl written by the developer
+    - Browsers convert the HTML into a tree like structure known as DOM
+    - DOM is easily undertsandable by the browser
+
+
+
+React was founded by Facebook
+    - 2013
+    - 2015 (open source)
+
+
+ReactJS:
+    (1) Used to manage the views based on the data it gets
+    (2) React creates a copy of the DOM known as virtual DOM
+    (3) On any user action, React will make a change to the virtual DOM
+    (4) React will compare the Virtual DOM with Actual DOM to get the changes
+        - does it with the help of differential algorithm
+    (5) React will patch the changes to the Actual DOM
+    (6) Hence gaining the perofrmance singnificantly
+        - You need not to Re-create the entire Actual DOM
+
+
+Write the code in ReactJS:
+    - entire code is divided into components
+    - small pieces of functionalities
+    - they are of the following types:
+        (1) Functional components
+        (2) Class based components
+
+    - HTML + JS = JSX (Javascript XML)
+        - We will write the HTML directly in JS
+
+
+Create React App utility (https://www.npmjs.com/package/create-react-app)
+
+npm i create-react-app -g
+
+To create a react project
+    - npx create-react-app <name_of_your_application>
+        e.g. npx create-react-app my-first-react-app
+
+To Run the react project
+    - go inside the project
+        - cd my-first-react-app
+        - npm start

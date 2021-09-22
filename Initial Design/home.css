@@ -1,0 +1,63 @@
+body{
+  margin: 0px;
+}
+.topnav {
+  background-color: #ce0505;
+  width: 100%;
+  height: 7%;
+  margin: 0px 0px 35px 0px;
+}
+#login{
+  font-family: Poppins;
+  font-size: 16px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.56;
+  letter-spacing: normal;
+  text-align: center;
+  color: #ffffff;
+}
+#account{
+  position: absolute;
+    right: 10%;
+    color: #ffffff;
+    width: 152px;
+    height: 23px;
+    font-family: Poppins;
+    font-size: 17px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.56;
+    letter-spacing: normal;
+    text-decoration: none;
+    padding: 5px;
+    border-color: #ffffff;
+    border-style: solid;
+    border-width: thin;
+    margin: 13px;
+    text-align: center;
+}
+#login{
+  position: absolute;
+    right: 18%;
+    color: #ffffff;
+    width: 152px;
+    height: 23px;
+    font-family: Poppins;
+    font-size: 17px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.56;
+    letter-spacing: normal;
+    text-decoration: none;
+    padding: 5px;
+    margin: 13px;
+    text-align: center;
+}
+
+  
+
+  
